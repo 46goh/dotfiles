@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v2
-      - name: install
-        run: ./install.sh
+      - name: setup
+        run: ./setup.sh
 

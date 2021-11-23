@@ -28,7 +28,7 @@ cd ~/dotfiles
 brew bundle
 
 echo "--- Linking dotfiles... ---"
-stow fish git tmux vim
+stow --verbose --adopt fish git tmux vim
 echo "--- Successfully linked dotfiles! ---"
 
 echo "--- Setting fisher... ---"

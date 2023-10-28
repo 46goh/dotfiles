@@ -13,7 +13,6 @@ set number
 "色
 set background=dark
 "カラーテーマは入れたら有効にしてください
-let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
 
 
@@ -42,9 +41,9 @@ set smarttab
 set visualbell t_vb=
 
 "長い行の折り返し表示
-set wrap
+"set wrap
 
-"検索設定
+""検索設定
 "インクリメンタルサーチしない
 set noincsearch
 "ハイライト
@@ -63,7 +62,7 @@ set gdefault
 set list
 set listchars=tab:>-,eol:↲,extends:»,precedes:«,nbsp:%
 
-"コマンドラインモードのファイル補完設定
+""コマンドラインモードのファイル補完設定
 set wildmode=list:longest,full
 
 "入力中のコマンドを表示
@@ -103,7 +102,8 @@ set undodir=$HOME/.vim/backup
 "スワップファイルを作成しない
 set noswapfile
 
-
+"マウスモードon
+set mouse=a
 
 """"""""""""""""""""""""""""""
 
@@ -121,11 +121,11 @@ noremap <S-j> }
 noremap <S-k> {
 noremap <S-l> $
 
-";;でノーマルモード
+"";;でノーマルモード
 inoremap ;; <esc>
 
 "ノーマルモードのまま改行
-nnoremap <CR> A<CR><ESC>
+"nnoremap <CR> A<CR><ESC>
 "ノーマルモードのままスペース
 nnoremap <space> i<space><esc>
 
@@ -146,7 +146,7 @@ if &term =~ "xterm"
     let &pastetoggle = "\e[201~"
 
     function XTermPasteBegin(ret)
-        set paste
+            set paste
         return a:ret
     endfunction
 
